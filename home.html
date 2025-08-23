@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Kamalpokhari Boys Hostel | Affordable Student Accommodation in Kathmandu
+    </title>
+    <meta
+      name="description"
+      content="Affordable, clean and secure boys hostel in Kamalpokhari, Kathmandu. Perfect for students with all modern amenities."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="./contact/contact.css  " />
+    <link rel="stylesheet" href="./components/footer/footer.css" />
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <div id="header"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Your Home Away From Home in Kathmandu</h1>
+          <p>
+            Kamalpokhari Boys Hostel offers affordable, clean and secure
+            accommodation for students with modern amenities, located in the
+            heart of Kathmandu.
+          </p>
+          <div class="btn-container">
+            <a href="#rooms" class="btn">View Rooms & Prices</a>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Gallery</h2>
+          <p>Take a look at our facilities and living spaces</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+              alt="Hostel Room"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+              alt="Hostel Common Area"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Hostel Room"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Hostel Exterior"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1347&q=80"
+              alt="Hostel Room"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Hostel Room"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact and Location -->
+    <div id="contact"></div>
+    <div id="footer"></div>
+  </body>
+
+  <!-- JavaScript -->
+  <!-- For loading the components  -->
+  <script>
+    function loadComponent(id, file) {
+      fetch(file)
+        .then((res) => res.text())
+        .then((html) => (document.getElementById(id).innerHTML = html))
+        .catch((err) => console.error("Error loading", file, err));
+    }
+
+    loadComponent("header", "./components/header/header.html");
+    loadComponent("contact", "./contact/contact.html");
+    loadComponent("footer", "./components/footer/footer.html");
+  </script>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("fa-times");
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("fa-times");
+      });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+
+    // Form submission handling
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you for your message! We will get back to you soon.");
+        this.reset();
+      });
+
+    document
+      .getElementById("newsletterForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you for subscribing to our newsletter!");
+        this.reset();
+      });
+
+    // Back to top button visibility
+    window.addEventListener("scroll", function () {
+      const backToTop = document.querySelector(".back-to-top");
+      if (window.pageYOffset > 300) {
+        backToTop.style.opacity = "1";
+        backToTop.style.visibility = "visible";
+      } else {
+        backToTop.style.opacity = "0";
+        backToTop.style.visibility = "hidden";
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamalpokhari Boys Hostel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      background: #f4f6f1;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 200px;
+      background: black;
+      border-radius: 20px;
+      padding: 20px;
+      color: white;
+      float: left;
+      height: 380px;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar button, .sidebar a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .sidebar button.active {
+      background: #dcdcdc;
+      color: black;
+    }
+
+    .login-btn {
+      margin-top: 40px;
+      background: #dcdcdc;
+      color: black !important;
+      border-radius: 20px;
+      padding: 10px;
+      text-align: center;
+      display: block;
+      font-weight: bold;
+    }
+
+    /* Header Section */
+    .header {
+      margin-left: 240px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .header .title {
+      background: #d9e1e2;
+      padding: 30px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .header img {
+      width: 300px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Why Choose Us */
+    .features {
+      margin-left: 240px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .feature {
+      width: 20%;
+    }
+
+    .feature img, .feature-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .feature h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Kamalpokhari Boys Hostel</h2>
+      <button class="active">Home</button>
+      <button>Our Rooms</button>
+      <button>Contact us</button>
+      <button>About us</button>
+      <button>Gallery</button>
+      <a href="#" class="login-btn">Login</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="title">
+        Welcome to <br> Kamalpokhari Boys Hostel
+      </div>
+      <img src="https://i.ibb.co/smS47rS/hostel.png" alt="Hostel Image">
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+      <h2>Why choose us</h2>
+      <div class="feature-list">
+        <div class="feature">
+          <div class="feature-icon">🧹</div>
+          <h3>House Keeping</h3>
+          <p>Daily professional cleaning services to keep your living space spotless and comfortable.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧺</div>
+          <h3>Laundry</h3>
+          <p>Hostel provides a laundry facility for convenient, regular, and hygienic washing of clothes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📶</div>
+          <h3>Wifi</h3>
+          <p>Wi-Fi: High-speed internet access available throughout the hostel for seamless connectivity.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🍴</div>
+          <h3>Canteen</h3>
+          <p>A hostel facility offering fresh, affordable meals and snacks for students.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

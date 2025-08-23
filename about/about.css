@@ -1,0 +1,114 @@
+ /* About Section */
+        .about {
+            padding: 6rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content h2 {
+            margin-bottom: 1.8rem;
+            color: #2c3e50;
+            font-size: 2.2rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 2.5rem;
+            border-left: 4px solid #3498db;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #555;
+            position: relative;
+        }
+        
+        .testimonial p::before {
+            content: '"';
+            font-size: 3rem;
+            color: #3498db;
+            position: absolute;
+            left: -15px;
+            top: -15px;
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }

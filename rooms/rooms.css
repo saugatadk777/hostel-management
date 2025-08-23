@@ -1,0 +1,107 @@
+ /* Rooms Section */
+        .rooms {
+            padding: 6rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 48px;;
+        }
+        
+        .room-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s;
+            position: relative;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .room-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .room-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .room-card:hover .room-img img {
+            transform: scale(1.1);
+        }
+        
+        .room-info {
+            padding: 1.8rem;
+            position: relative;
+        }
+        
+        .room-info h3 {
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+            font-size: 1.4rem;
+        }
+        
+        .room-info p {
+            color: #7f8c8d;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        
+        .room-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature {
+            background: #f1f5f9;
+            color: #2c3e50;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature i {
+            margin-right: 5px;
+            font-size: 0.7rem;
+            color: #3498db;
+        }
+        
+        .book-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #3498db;
+            color: white;
+            padding: 0.7rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .book-btn:hover {
+            background: #2980b9;
+        }

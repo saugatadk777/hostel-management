@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT US</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="../components/footer/footer.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Our Hostel</h2>
+          <p>Providing quality accommodation for students since 2010</p>
+        </div>
+        <div class="about-container">
+          <div class="about-img">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Hostel Building"
+            />
+          </div>
+          <div class="about-content">
+            <h2>Welcome to Kamalpokhari Boys Hostel</h2>
+            <p>
+              Established in 2010, Kamalpokhari Boys Hostel has been providing
+              affordable and comfortable accommodation to students from all over
+              Nepal. Our mission is to create a home-like environment where
+              students can focus on their studies while enjoying modern
+              amenities and a supportive community.
+            </p>
+            <p>
+              Located just 5 minutes walk from Kamalpokhari, our hostel offers
+              easy access to major educational institutions, shopping areas, and
+              public transportation. We take pride in our clean facilities,
+              healthy meals, and 24/7 security to ensure peace of mind for both
+              students and their parents.
+            </p>
+
+            <div class="testimonial">
+              <p>
+                "I stayed at Kamalpokhari Boys Hostel for three years during my
+                bachelor's degree. The environment was perfect for studying,
+                with clean rooms, good food, and helpful staff. It truly felt
+                like a home away from home."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  alt="Student"
+                />
+                <div>
+                  <strong>Rajesh Sharma</strong><br />
+                  BBA Graduate, 2015-2018
+                </div>
+              </div>
+            </div>
+
+            <div class="stats">
+              <div class="stat-item">
+                <h3>120+</h3>
+                <p>Happy Students</p>
+              </div>
+              <div class="stat-item">
+                <h3>12+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script>
+  function loadComponent(id, file) {
+    fetch(file)
+      .then((res) => res.text())
+      .then((html) => (document.getElementById(id).innerHTML = html))
+      .catch((err) => console.error("Error loading", file, err));
+  }
+
+  loadComponent("header", "../components/header/header.html");
+  loadComponent("footer", "../components/footer/footer.html");
+</script>

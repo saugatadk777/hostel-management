@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="../components/footer/footer.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Facilities</h2>
+          <p>
+            We provide all essential amenities to make your stay comfortable and
+            productive
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-wifi"></i>
+            <h3>High-Speed WiFi</h3>
+            <p>
+              24/7 high-speed internet access throughout the hostel for seamless
+              connectivity.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Healthy Meals</h3>
+            <p>
+              Nutritious and hygienic meals served in our clean dining area
+              three times a day.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-broom"></i>
+            <h3>Daily Cleaning</h3>
+            <p>
+              Professional housekeeping to maintain cleanliness in rooms and
+              common areas.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-book"></i>
+            <h3>Study Room</h3>
+            <p>
+              Quiet study area with ample lighting and comfortable seating for
+              focused learning.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-tshirt"></i>
+            <h3>Laundry Service</h3>
+            <p>
+              Affordable laundry facilities available with weekly service
+              options.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>24/7 Security</h3>
+            <p>
+              CCTV surveillance and security personnel for complete safety of
+              our residents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+  </body>
+
+  <script>
+    function loadComponent(id, file) {
+      fetch(file)
+        .then((res) => res.text())
+        .then((html) => (document.getElementById(id).innerHTML = html))
+        .catch((err) => console.error("Error loading", file, err));
+    }
+
+    loadComponent("header", "../components/header/header.html");
+    loadComponent("footer", "../components/footer/footer.html");
+  </script>
+</html>
